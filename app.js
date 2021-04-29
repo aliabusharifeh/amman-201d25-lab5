@@ -84,12 +84,13 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumsum) { //eslint-disable-line
-    let sum=sum(sumsum[0],sum(sumsum[1],sumsum[2])[0])[0];
+    let sumsom=sum(sumsum[0],sum(sumsum[1],sumsum[2])[0])[0];
 
 
-    return [sum,`${sumsum[0]},${sumsum[1]},${sumsum[2]} was passed in as an array of numbers, and ${sum} is their sum.`];
+    return [sumsom,`${sumsum[0]},${sumsum[1]},${sumsum[2]} was passed in as an array of numbers, and ${sumsom} is their sum.`];
 }
 testSumArray(testArray);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -104,12 +105,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+function multiplyArray(multipl) { //eslint-disable-line
 
-}
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+    let  element = [];
+ 
+     let I1 = multiply((multipl[0]), (multipl[1]));
+     I1 = I1[0];
+ 
+ 
+     let product = multiply(I1, multipl[2]);
+     product = product[0];
+     element[0] = product;
+ 
+ 
+     element[1] = `The numbers ${multipl[0]},${multipl[1]},${multipl[2]} have a product of ${element}.`
+ 
+     return  element;
+ }
+  testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
